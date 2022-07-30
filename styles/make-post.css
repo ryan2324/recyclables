@@ -1,0 +1,586 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+body, html, * {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+  background-color: #FAFBFC;
+}
+
+body, html, * {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+  background-color: #FAFBFC;
+}
+
+nav {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 50px;
+  background-color: #ffffff;
+  position: relative;
+}
+
+@media screen and (max-width: 320px) {
+  nav {
+    padding: 10px;
+    height: 80px;
+  }
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
+@media screen and (max-width: 320px) {
+  nav ul {
+    -webkit-column-gap: 0;
+            column-gap: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+nav ul li {
+  list-style: none;
+  font-size: 18px;
+}
+
+nav ul #logo {
+  width: 50px;
+}
+
+@media screen and (max-width: 320px) {
+  nav ul #logo {
+    width: 30px;
+  }
+}
+
+nav ul #logo img {
+  width: 100%;
+}
+
+nav ul #brand {
+  margin-right: auto;
+}
+
+@media screen and (max-width: 320px) {
+  nav ul #brand {
+    display: none;
+  }
+}
+
+nav ul #thread {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+}
+
+@media screen and (max-width: 320px) {
+  nav ul #thread {
+    -webkit-column-gap: 5px;
+            column-gap: 5px;
+    font-size: 14px;
+    margin-top: 50px;
+  }
+}
+
+nav ul #thread #threadsMenu {
+  background-color: #fff;
+  z-index: 2;
+  position: absolute;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: 400;
+  left: 0;
+  top: 100%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.75);
+}
+
+nav ul #thread #threadsMenu li {
+  font-size: 16px;
+  white-space: nowrap;
+  padding: 3px;
+  width: 100%;
+}
+
+nav ul #thread #threadsMenu li:hover {
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+nav ul #search {
+  position: relative;
+  padding: 6px;
+}
+
+@media screen and (max-width: 320px) {
+  nav ul #search {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+nav ul #search input {
+  font-size: 18px;
+  padding: 6px 12px;
+  border-radius: .5rem;
+  border: transparent;
+  background-color: #F4F5F8;
+}
+
+nav ul #search input:focus, nav ul #search input:active {
+  outline: 1px solid #ccc;
+}
+
+@media screen and (max-width: 320px) {
+  nav ul #search input {
+    padding: 3px 6px;
+    font-size: 14px;
+  }
+}
+
+nav ul #search input:focus + #searchResultsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav ul #search #searchResultsContainer {
+  position: absolute;
+  top: 100%;
+  background-color: white;
+  width: 100%;
+  -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.75);
+  left: 0;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+nav ul #search #searchResultsContainer p {
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+nav ul #search #searchResultsContainer p:hover {
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+nav ul #makePost {
+  margin-left: auto;
+  background-color: #476954;
+  padding: 6px 12px;
+  border-radius: .5rem;
+}
+
+@media screen and (max-width: 320px) {
+  nav ul #makePost {
+    display: none;
+  }
+}
+
+nav ul #makePost a {
+  color: #fff;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  nav ul #makePost a {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+}
+
+nav ul #profile {
+  margin-right: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+@media screen and (max-width: 320px) {
+  nav ul #profile {
+    margin: 0;
+  }
+}
+
+nav ul #profile i {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 320px) {
+  nav ul #profile i {
+    font-size: 24px;
+  }
+}
+
+nav ul #profile .profileMenu {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: absolute;
+  top: 100%;
+  background-color: #476954;
+  border-radius: .5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  row-gap: 20px;
+  padding: 10px 0;
+}
+
+@media screen and (max-width: 320px) {
+  nav ul #profile .profileMenu {
+    row-gap: 10px;
+    left: -80px;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+nav ul #profile .profileMenu li {
+  white-space: nowrap;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  padding: 0 10px;
+  width: 100%;
+}
+
+@media screen and (max-width: 320px) {
+  nav ul #profile .profileMenu li {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+
+nav ul #profile .profileMenu li div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+}
+
+nav ul #profile .profileMenu li div i {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 320px) {
+  nav ul #profile .profileMenu li div i {
+    font-size: 16px;
+  }
+}
+
+nav ul #profile .profileMenu #profileLink, nav ul #profile .profileMenu #myPostLink {
+  color: rgba(204, 204, 204, 0.5);
+  cursor: default;
+}
+
+nav ul #loginBtn a, nav ul #signupBtn a, nav ul #makePost a, nav ul #brand a {
+  text-decoration: none;
+}
+
+nav ul #loginBtn {
+  margin-left: auto;
+}
+
+nav ul #loginBtn a {
+  font-weight: 600;
+  color: #000;
+}
+
+@media screen and (max-width: 320px) {
+  nav ul #loginBtn {
+    font-size: 14px;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  nav ul #signupBtn, nav ul #brand {
+    display: none;
+  }
+}
+
+nav ul #signupBtn a, nav ul #brand a {
+  color: #476954;
+  font-weight: 600;
+}
+
+body, html, * {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+  background-color: #FAFBFC;
+}
+
+footer {
+  height: 120px;
+  background-color: #476954;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+}
+
+@media screen and (max-width: 320px) {
+  footer ul {
+    -webkit-column-gap: 15px;
+            column-gap: 15px;
+  }
+}
+
+footer ul li {
+  color: #fff;
+  list-style-type: none;
+}
+
+@media screen and (max-width: 320px) {
+  footer ul li {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+}
+
+main {
+  height: 100vh;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 20px;
+}
+
+@media screen and (max-width: 320px) {
+  main h1 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main {
+    width: 95%;
+  }
+}
+
+main form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  row-gap: 5px;
+  background-color: #fff;
+  padding: 20px;
+  width: 100%;
+  border-radius: .5rem;
+}
+
+main form label {
+  color: #ccc;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 320px) {
+  main form label {
+    font-size: 12px;
+  }
+}
+
+main form .errorInput {
+  color: red;
+  font-size: 11px;
+}
+
+main form #charCounterContainer {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 12px;
+  color: #747474;
+}
+
+main form input, main form textarea {
+  font-size: 18px;
+  padding: 6px 12px;
+  border-radius: .5rem;
+  border: transparent;
+  background-color: #F4F5F8;
+}
+
+@media screen and (max-width: 320px) {
+  main form input, main form textarea {
+    font-size: 14px;
+  }
+}
+
+main form input:focus, main form input:active, main form textarea:focus, main form textarea:active {
+  outline: 1px solid #ccc;
+}
+
+main form input[name='desc'], main form textarea[name='desc'] {
+  resize: none;
+}
+
+main form input[type='file'], main form textarea[type='file'] {
+  display: none;
+  border-radius: .5rem;
+}
+
+main form input[type='submit'], main form textarea[type='submit'] {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: #476954;
+  color: #fff;
+  padding: 6px 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+main form label[for='image'] {
+  display: block;
+  background-color: #fff;
+  width: 120px;
+  height: 100px;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #F4F5F8;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 320px) {
+  main form label[for='image'] {
+    font-size: 14px;
+  }
+}
+
+main form label[for='image'] i {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 320px) {
+  main form label[for='image'] i {
+    font-size: 20px;
+  }
+}
+/*# sourceMappingURL=make-post.css.map */

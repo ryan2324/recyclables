@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+body, html, * {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+  background-color: #FAFBFC;
+}
+
+main {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+main .hero-img-container {
+  width: 50%;
+}
+
+@media screen and (max-width: 320px) {
+  main .hero-img-container {
+    display: none;
+  }
+}
+
+main .hero-img-container img {
+  width: 100%;
+}
+
+main form {
+  background-color: #fff;
+  padding: 25px 25px 45px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 10px;
+  border-radius: .5rem;
+  width: 30%;
+}
+
+@media screen and (max-width: 320px) {
+  main form {
+    width: 100%;
+  }
+}
+
+main form .errorInput {
+  color: red;
+  font-size: 11px;
+}
+
+main form .title {
+  color: #476954;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 320px) {
+  main form .title {
+    font-size: 16px;
+  }
+}
+
+main form .nameInputContainer {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+main form .nameInputContainer input[name='fName'] {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  width: 100%;
+}
+
+main form .nameInputContainer input[name='lName'] {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  width: 100%;
+}
+
+main form .nameInputContainer #fNameErr {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
+main form .nameInputContainer #lNameErr {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+
+main form input {
+  font-size: 24px;
+  padding: 6px 12px;
+  border-radius: .5rem;
+  border: transparent;
+  background-color: #F4F5F8;
+}
+
+@media screen and (max-width: 320px) {
+  main form input {
+    font-size: 16px;
+  }
+}
+
+main form input:focus, main form input:active {
+  outline: 1px solid #ccc;
+}
+
+main form input[value='Sign Up'] {
+  background-color: #476954;
+  color: #fff;
+}
+
+main form input[name='fName'], main form input[name='lName'] {
+  width: 48%;
+}
+
+main form p {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+main form .login-account {
+  color: #476954;
+  font-weight: 600;
+  font-size: 18px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 320px) {
+  main form .login-account {
+    font-size: 14px;
+  }
+}
+
+main form .forgotpw {
+  font-size: 14px;
+}
+
+footer {
+  height: 120px;
+  background-color: #476954;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+}
+
+@media screen and (max-width: 320px) {
+  footer ul {
+    -webkit-column-gap: 15px;
+            column-gap: 15px;
+  }
+}
+
+footer ul li {
+  color: #fff;
+  list-style-type: none;
+}
+
+@media screen and (max-width: 320px) {
+  footer ul li {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+}
+/*# sourceMappingURL=signup.css.map */

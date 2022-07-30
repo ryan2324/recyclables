@@ -1,0 +1,25 @@
+@import 'default';
+footer{
+    height: 120px;
+    background-color: #476954;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    ul{
+        display: flex;
+        column-gap: 30px;
+        @include mobile(){
+            column-gap: 15px;
+        } 
+        li{
+            color: #fff;
+            list-style-type: none;
+            @include mobile(){
+                font-size: 14px;
+                white-space: nowrap;
+            } 
+        }
+    }
+}

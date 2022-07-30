@@ -1,0 +1,232 @@
+@import 'default';
+nav{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    background-color: #ffffff;
+    position: relative;
+    @include mobile(){
+        padding: 10px;
+        height: 80px;
+    }
+    ul{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        column-gap: 20px;
+        @include mobile(){
+            column-gap: 0;
+            justify-content: space-between;
+        }
+        li{
+            list-style: none;
+            font-size: 18px;
+        }
+        #logo{
+            width: 50px;
+            @include mobile(){
+                width: 30px;
+            }
+            img{
+                width: 100%;
+            }
+        }
+        #brand{
+            margin-right: auto;
+            @include mobile(){
+                display: none;
+            }
+        }
+        #thread{
+            position: relative;
+            display: flex;
+            column-gap: 10px;
+            @include mobile(){
+                column-gap: 5px;
+                font-size: 14px;
+                margin-top: 50px;
+            }
+            #threadsMenu{
+                background-color: #fff;
+                z-index: 2;
+                position: absolute;
+                display: none;
+                flex-direction: column;
+                font-weight: 400;
+                left: 0;
+                top: 100%;
+                align-items: flex-start;
+                width: fit-content;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.75);
+                li{
+                    font-size: 16px;
+                    white-space: nowrap;
+                    padding: 3px;
+                    width: 100%;
+                    &:hover{
+                        background-color: #ccc;
+                        cursor: pointer;
+                    }
+                }
+                
+            }
+        }
+        #search{
+            position: relative;
+            padding: 6px;
+            @include mobile(){
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+            input{
+                font-size: 18px;
+                padding: 6px 12px;
+                border-radius: .5rem;
+                border: transparent;
+                background-color: #F4F5F8;
+                &:focus, &:active{
+                    outline: 1px solid #ccc;
+                }
+                @include mobile (){
+                    padding: 3px 6px;
+                    font-size: 14px;
+                }
+            }
+            input:focus + #searchResultsContainer{
+                display: flex;
+                
+            }
+            #searchResultsContainer{
+                position: absolute;
+                top: 100%;
+                background-color: rgb(255, 255, 255);
+                width: 100%;
+                box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.75);
+                left: 0;
+                display: none;
+                flex-direction: column;
+                p{
+                    padding: 6px 12px;
+                    font-size: 14px;
+                    &:hover{
+                        background-color: #ccc;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        #makePost{
+            margin-left: auto;
+            background-color: #476954;
+            padding: 6px 12px;
+            border-radius: .5rem;
+            @include mobile() {
+                display: none;
+            }
+            a{
+                color: #fff;
+                font-weight: 600;
+                @include tablet(){
+                    font-size: 14px;
+                    white-space: nowrap;
+                }
+            }
+            
+        }
+        #profile{
+            margin-right: 50px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            @include mobile(){
+                margin: 0;
+            }
+            i{
+                font-size: 30px;
+                cursor: pointer;
+                @include mobile(){
+                    font-size: 24px;
+                }
+            }
+            .profileMenu{
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                position: absolute;
+                top: 100%;
+                background-color: #476954   ;
+                border-radius: .5rem;
+                width: fit-content;
+                left: 50%;
+                transform: translateX(-50%);
+                row-gap: 20px;
+                padding: 10px 0;
+                @include mobile() {
+                    row-gap: 10px;
+                    left: -80px;
+                    transform: translateX(0);
+                }
+                li{
+                    white-space: nowrap;
+                    font-weight: 500;
+                    color: #fff;
+                    cursor: pointer;
+                    padding: 0 10px;
+                    width: 100%;
+                    @include mobile() {
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+                    div{
+                        display: flex;
+                        column-gap: 10px;
+                        i{
+                            font-size: 18px;
+                            @include mobile() {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+                #profileLink, #myPostLink{
+                    color: rgba($color: #ccc, $alpha: .5);
+                    cursor: default ;
+                }
+            }
+        }
+        #loginBtn, #signupBtn, #makePost, #brand{
+            a{
+                text-decoration: none;
+            }
+            
+        }
+        #loginBtn{
+            margin-left: auto;
+            a{
+                font-weight: 600;
+                color: #000;
+            }
+            @include mobile(){
+                font-size: 14px;
+                margin-left: 0;
+            } 
+        }
+        #signupBtn, #brand{
+            @include mobile(){
+                display: none;
+            } 
+            a{
+                color: #476954;
+                font-weight: 600;
+            }
+            
+        }
+    }
+}

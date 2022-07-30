@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import 'default';
+main{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    .hero-img-container{
+        width: 50%;
+        @include mobile(){
+            display: none;
+        } 
+        img{
+            width: 100%;
+        }
+    }
+    form{
+        background-color: #fff;
+        padding: 25px 25px 45px 25px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        border-radius: .5rem;
+        width: 30%;
+        @include mobile(){
+            width: 100%;
+        } 
+        .errorInput{
+            color: red;
+            font-size: 11px;
+        }
+        .title{
+            color: #476954;
+            font-size: 28px;
+            font-weight: 500;
+            @include mobile(){
+                font-size: 16px;
+            } 
+        }
+        .nameInputContainer{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            input[name='fName']{
+                grid-column: 1/2;
+                width: 100%;
+            }
+            input[name='lName']{
+                grid-column: 2/3;
+                grid-row: 1/2;
+                width: 100%;
+            }
+            #fNameErr{
+                grid-column: 1/2;
+            }
+            #lNameErr{
+                grid-column: 2/3;
+            }
+        }
+        input{
+            font-size: 24px;
+            padding: 6px 12px;
+            border-radius: .5rem;
+            border: transparent;
+            background-color: #F4F5F8;
+            @include mobile(){
+                font-size: 16px;
+            } 
+            &:focus, &:active{
+                outline: 1px solid #ccc;
+            }
+            &[value='Sign Up']{
+                background-color: #476954;
+                color: #fff;
+            }
+            &[name='fName'], &[name='lName']{
+                width: 48%;
+            }
+        }
+        p{
+            align-self: center;
+        }
+        .login-account{
+            color: #476954;
+            font-weight: 600;
+            font-size: 18px;
+            align-self: center;
+            text-decoration: none;
+            @include mobile(){
+                font-size: 14px;
+            } 
+        }
+        .forgotpw{
+            font-size: 14px;
+        }
+    }
+}
+footer{
+    height: 120px;
+    background-color: #476954;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    ul{
+        display: flex;
+        column-gap: 30px;
+        @include mobile(){
+            column-gap: 15px;
+        } 
+        li{
+            color: #fff;
+            list-style-type: none;
+            @include mobile(){
+                font-size: 14px;
+                white-space: nowrap;
+            } 
+        }
+    }
+}
